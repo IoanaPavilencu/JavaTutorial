@@ -37,33 +37,40 @@ public class OOPTest {
 //        System.out.println("-----------------------------------------------------------------------------------");
 ////
 //
-//        // Dam o comanda de o masina Volkswagen:
-//        List<String> dotariOptionalePolo= Arrays.asList("Pachet Comfort", "Trapa de sticla panoramica","Alarma antifurt","Keyless access");
-//
-//        VolkswagenConfigurator Polo = new VolkswagenConfigurator("Volkswagen","Polo", 2023,"Advanced", "Polo life 1.0","Gri","Roti15","stofa",dotariOptionalePolo);
-//        Polo.infoVolkswagen();
-//
-//        System.out.println("-----------------------------------------------------------------------------------");
-//
-//
+        // Dam o comanda de o masina Volkswagen:
+        List<String> dotariOptionalePolo= Arrays.asList("Pachet Comfort", "Trapa de sticla panoramica","Alarma antifurt","Keyless access");
+
+        VolkswagenConfigurator Polo = new VolkswagenConfigurator("Volkswagen","Polo", 2023,"Base", "Polo life 1.0","White",
+                "Jante aliaj 18''","Standard",dotariOptionalePolo);
+        Polo.infoVolkswagen();
+        Polo.calculPretStandard();
+        Polo.calculPretFinal();
+        Polo.deschiderePortbagaj();
+        Polo.ofertaVolkswagen();
+        Polo.ofertaVolkswagen("Cumparator");
+        Polo.ofertaVolkswagen(10);
+
+        System.out.println("-----------------------------------------------------------------------------------");
+
+
 //        //TEMA: Mai definesc 2 Volkwagen
 //
-//        List<String> dotariOptionaleTiguan = Arrays.asList("Pachet Iarna","Plasa despartitoare portbagaj","Set bare transversale");
-//
-//        VolkswagenConfigurator Tiguan = new VolkswagenConfigurator("Volkswagen","Tiguan",2024,"Elegance","Hybrid 1,5 TSI DSG","Red","Aliaj 20''","Piele",dotariOptionaleTiguan);
-//        Tiguan.infoVolkswagen();
-//        Tiguan.calculPretStandard();
-//        Tiguan.calculPretFinal();
-//
-//        System.out.println("-----------------------------------------------------------------------------------");
-//
+        List<String> dotariOptionaleTiguan = Arrays.asList("Pachet Iarna","Plasa despartitoare portbagaj","Set bare transversale");
+
+        VolkswagenConfigurator Tiguan = new VolkswagenConfigurator("Volkswagen","Tiguan",2024,"Elegance","Hybrid 1,5 TSI DSG","Red","Aliaj 20''","Piele",dotariOptionaleTiguan);
+        Tiguan.infoVolkswagen();
+        Tiguan.calculPretStandard();
+        Tiguan.calculPretFinal();
+
+        System.out.println("-----------------------------------------------------------------------------------");
+
 //        List<String> dotariOptionalePassat = Arrays.asList("Pachet Comfort", "Cutie bagaje basic Volkswagen 340l, culoare negru mat");
 //
 //        VolkswagenConfigurator Passat = new VolkswagenConfigurator("Volkswagen","Passat",2023,"Base", " 2.0 TDI","White","Aliaj 18''","Standard",dotariOptionalePassat);
 //        Passat.infoVolkswagen();
 //
 //        System.out.println("-----------------------------------------------------------------------------------");
-//
+
 //        List<String> echipareQ8 = Arrays.asList("Pachet sport - S line","Adaptive air suspension","Centuri de siguranta Audi Exclusive","Audi Phone Box - Wireless Charging Qi");
 //
 //        AudiConfigurator Q8 = new AudiConfigurator("Audi","Q8",2022,"Q8","Q8 PI 45 TDI quattro","Gold metalizat","Jante 20''",

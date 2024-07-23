@@ -36,40 +36,44 @@ public class VolkswagenConfigurator extends MasinaConfigurator{
         for (Integer t=0; t<dotariOptionale.size(); t++){
             System.out.println(dotariOptionale.get(t));
         }
+        calculPretStandard();
+        calculPretFinal();
 
     }
+
+    //Aplicam polimorfismul dinamic
+
+    public void deschiderePortbagaj(){
+        System.out.println("Portbagajul masinilor Volkswagen se deschide prin apasarea butonului specific de la telecomanda.");
+    }
+
+
     //Determinam pretul standard in functie de model
     public void calculPretStandard(){
-        if (getModel().equals("Tiguan")){
+        if (getModel().equals("Polo")){
             if(linieDeEchipare.equals("Base")){
-                pretStandard += 33.302;
+                pretStandard += 20.000;
             }
             if (linieDeEchipare.equals("Life")){
-                pretStandard += 35.539;
+                pretStandard += 22.500;
             }
             if (linieDeEchipare.equals("Advanced")){
-                pretStandard += 40.052;
-            }
-            if (linieDeEchipare.equals("Elegance")){
-                pretStandard += 42.294;
-            }
-            if (linieDeEchipare.equals("R-Line")){
-                pretStandard += 43.190;
+                pretStandard += 24.000;
             }
 
-        } else if (getModel().equals("Passat")) {
+        } else if (getModel().equals("Tiguan")) {
             switch (linieDeEchipare){
                 case "Base":
                     pretStandard += 33.562;
                     break;
                 case "Business":
-                    pretStandard += 33.562;
+                    pretStandard += 35.570;
                     break;
                 case "Elegance":
-                    pretStandard += 33.562;
+                    pretStandard += 37.590;
                     break;
                 case "RLine":
-                    pretStandard += 33.562;
+                    pretStandard += 39.700;
                     break;
             }
 
@@ -78,25 +82,25 @@ public class VolkswagenConfigurator extends MasinaConfigurator{
     }
     public void calculPretFinal(){
         double pretOptiuni = 0.000;
-        if (getModel().equals("Tiguan")){
+        if (getModel().equals("Polo")){
             switch (vopsea){
                 case "White":
                     pretOptiuni += 0;
                     break;
                 case "Blue":
-                    pretOptiuni += 674.73;
+                    pretOptiuni += 674.00;
                     break;
                 case "Gray":
-                    pretOptiuni += 674.73;
+                    pretOptiuni += 674.00;
                     break;
                 case "Red":
-                    pretOptiuni += 674.73;
+                    pretOptiuni += 674.00;
             }
             switch (roti){
-                case "Jante aliaj 19''":
+                case "Jante aliaj 17''":
                     pretOptiuni += 0;
                     break;
-                case "Jante aliaj 20''":
+                case "Jante aliaj 18''":
                     pretOptiuni +=504.56;
                     break;
             }
@@ -108,24 +112,24 @@ public class VolkswagenConfigurator extends MasinaConfigurator{
                     pretOptiuni += 2251.48;
                     break;
             }
-        } else if (getModel().equals("Passat")){
+        } else if (getModel().equals("Tiguan")){
             switch (vopsea){
                 case "White":
                     pretOptiuni += 0;
                     break;
                 case "Blue":
-                    pretOptiuni += 624.75;
+                    pretOptiuni += 824.75;
                     break;
                 case "Gray":
-                    pretOptiuni += 624.75;
+                    pretOptiuni += 824.75;
                     break;
                 case "Red":
-                    pretOptiuni += 624.75;
+                    pretOptiuni += 824.75;
             }
             switch (roti){
-                case "Jante aliaj 18''":
-                    pretOptiuni += 0;
                 case "Jante aliaj 19''":
+                    pretOptiuni += 0;
+                case "Jante aliaj 20''":
                     pretOptiuni +=549.78;
             }
             switch (tapiterie){

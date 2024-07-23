@@ -51,6 +51,10 @@ public class MasinaConfigurator {
         System.out.println("Geamurile masinii se deschid electric.");
     }
 
+    public void deschiderePortbagaj(){
+        System.out.println("Portbagajul se deschide cu telecomanda.");
+    }
+
     // POLIMORFISM STATIC:
      public void promotieDacia(){
          System.out.println("Pentru luna Iulie, Dacia nu are nici o promotie.");
@@ -63,6 +67,17 @@ public class MasinaConfigurator {
     public void promotieDacia(Integer reducere){
         System.out.println("In luna Decembrie, Dacia primeste " + reducere);
     }
+
+    public void ofertaVolkswagen(){
+        System.out.println("Primii 10 clienti au parte de un schimb de ulei gratuit.");
+    }
+    public void ofertaVolkswagen(String client){
+        System.out.println("Daca aduci un " +client+ " ai parte de CASCO gratuit timp de un an.");
+    }
+    public void ofertaVolkswagen(Integer discount){
+        System.out.println("Daca achiti masina integral cash, se va aplica " +discount +  " reducere din valoarea acesteia.");
+    }
+
 
 
 
