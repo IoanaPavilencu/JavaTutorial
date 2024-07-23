@@ -1,9 +1,7 @@
 package OOP;
 
-import org.openqa.selenium.bidi.log.Log;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,20 +17,25 @@ public class OOPTest {
         DaciaConfigurator Logan = new DaciaConfigurator("Dacia", "Logan", 2024, "Essential", "TCE s90", "Grey", "Standard",
                 "Standard", echipamenteLogan, accesoriiLogan);
         Logan.infoDacia();
+        Logan.pornesteMotorul();
+        Logan.deschidereGeam();
+        Logan.promotieDacia();
+        Logan.promotieDacia("RABLA");
+        Logan.promotieDacia(25);
 
         System.out.println("-----------------------------------------------------------------------------------");
 
         //Tema: Mai definesc o Dacia:
-
-        List<String> echipamenteDuster = Arrays.asList("Heated seats","Parking Pack","Techno Pack");
-        List<String> accesoriiDuster = Arrays.asList("Carlig remorcare","Suport bicicleta","Suport tetiera","Suport portbagaj");
-
-        DaciaConfigurator Duster = new DaciaConfigurator("Dacia","Duster",2023,"Prestige","HEV 140","Black","Standard",
-                "Piele",echipamenteDuster,accesoriiDuster);
-        Duster.infoDacia();
-
-        System.out.println("-----------------------------------------------------------------------------------");
 //
+//        List<String> echipamenteDuster = Arrays.asList("Heated seats","Parking Pack","Techno Pack");
+//        List<String> accesoriiDuster = Arrays.asList("Carlig remorcare","Suport bicicleta","Suport tetiera","Suport portbagaj");
+//
+//        DaciaConfigurator Duster = new DaciaConfigurator("Dacia","Duster",2023,"Prestige","HEV 140","Black","Standard",
+//                "Piele",echipamenteDuster,accesoriiDuster);
+//        Duster.infoDacia();
+//
+//        System.out.println("-----------------------------------------------------------------------------------");
+////
 //
 //        // Dam o comanda de o masina Volkswagen:
 //        List<String> dotariOptionalePolo= Arrays.asList("Pachet Comfort", "Trapa de sticla panoramica","Alarma antifurt","Keyless access");

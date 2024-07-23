@@ -26,6 +26,13 @@ public class MasinaConfigurator {
     // Ca sa apelam constructorul din parinte in copil se foloseste keyword-ul "super";
 
     //Incapsulare = conceptul prin care putem sa setam anumite restrictii de vizibilitate pentru proprietati/metode;
+    // POLIMORFISM = conceptul prin care o metoda poate avea implementari diferite;
+    // Polimorfismul poate sa fie de 2 feluri :DINAMIC (OVERRIDE) si STATIC (OVERLOAD);
+    // Polimorfism DINAMIC = Intr-o ierarhie de clase obtinute prin mostenire, o metoda poate avea implementari diferite;
+    // Polimorfismul dinamic este prezent doar la mostenire;
+    // Polimorfism STATIC = Daca avem nevoie ca o metoda sa fie folosita in diferite circumstante, putem defini mai multe metode
+    //                      cu acelasi nume avand numar de parametri/tip parametri diferiti;
+
 
 
     public void infoMasina(){
@@ -35,27 +42,59 @@ public class MasinaConfigurator {
 
     }
 
+    // POLIMORFISM DINAMIC:
+
+    public void pornesteMotorul(){
+        System.out.println("Masina se porneste cu ajutorul cheii.");
+    }
+    public void deschidereGeam(){
+        System.out.println("Geamurile masinii se deschid electric.");
+    }
+
+    // POLIMORFISM STATIC:
+     public void promotieDacia(){
+         System.out.println("Pentru luna Iulie, Dacia nu are nici o promotie.");
+     }
+
+     public void promotieDacia(String ticket){
+        System.out.println("Daca ai " +ticket + " RABLA, primeste reducere!");
+    }
+
+    public void promotieDacia(Integer reducere){
+        System.out.println("In luna Decembrie, Dacia primeste " + reducere);
+    }
+
+
+
+
+
     public String getMarca() {
+
         return marca;
     }
 
     public String getModel() {
+
         return model;
     }
 
     public Integer getAn() {
+
         return an;
     }
 
     public void setMarca(String marca) {
+
         this.marca = marca;
     }
 
     public void setModel(String model) {
+
         this.model = model;
     }
 
     public void setAn(Integer an) {
+
         this.an = an;
     }
 }

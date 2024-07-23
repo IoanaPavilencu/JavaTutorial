@@ -50,6 +50,16 @@ public class DaciaConfigurator extends MasinaConfigurator {
 
     }
 
+    // Aplicam Polimorfismul Dinamic
+
+    public void pornesteMotorul(){
+        System.out.println("Masinile Dacia pornesc de la buton.");
+
+    }
+    public void deschidereGeam(){
+        System.out.println("Geamurile masinilor se deschid de la manivela.");
+    }
+
     // Trebuie sa determinam pretul standard in functie de modelul masinii(Dacia vs VW vs Audi)
 
     public void calculPretStandard(){
